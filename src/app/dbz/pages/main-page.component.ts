@@ -7,15 +7,14 @@ import { Character } from "../interfaces/character.interface";
 })
 
 export class MainPageComponent {
-
-    public characters: Character[] = [{
-      name: 'Krillin',
-      power: 1000
-    },{
-      name: 'Goku',
-      power: 9500
-    },{
-      name: 'Vegeta',
-      power: 7500
-    }];
+  public characters: Character[] = [{
+    name: 'Killian',
+    power: 950
+  },{
+    name: 'Goku',
+    power: 1000
+  },{
+    name: 'Vegeta',
+    power: 2000
+  }]
 }

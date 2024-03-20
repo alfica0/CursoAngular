@@ -10,7 +10,7 @@ import { Character } from '../../interfaces/character.interface';
 export class ListComponent {
 
   @Input()
-  public characterList: Character[] = [{
+  public ListCharaters: Character[] = [{
     name: 'Trunk',
     power: 10
   }]
