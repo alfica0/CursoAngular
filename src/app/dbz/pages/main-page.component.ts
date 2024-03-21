@@ -23,4 +23,8 @@ export class MainPageComponent {
     this.characters.push(character)     //Lo añade al final
   }
 
+  onDeleteCharacter( index:number ):void {
+    this.characters.splice(index,1)
+  }
+
 }
