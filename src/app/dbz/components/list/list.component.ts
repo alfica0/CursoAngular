@@ -18,7 +18,7 @@ export class ListComponent {
   @Output()
   public onDelete: EventEmitter<number> = new EventEmitter();
 
-  deleteItem(index:number){
-    this.onDelete.emit( index );
+  deleteItem(id:number){
+    this.onDelete.emit( id );
   }
 }
