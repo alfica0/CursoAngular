@@ -14,4 +14,8 @@ export class ListComponent {
     name: 'Trunk',
     power: 10
   }]
+
+  deleteItem(index:number){
+
+  }
 }

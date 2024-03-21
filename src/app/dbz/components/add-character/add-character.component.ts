@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'dbz-add-character',
@@ -7,4 +8,23 @@ import { Component } from '@angular/core';
 })
 export class AddCharacterComponent {
 
+  @Output()
+  public onNewCharacter: EventEmitter<Character> = new EventEmitter();
+
+    public character: Character = {
+      name: "",
+      power: 0
+    }
+
+    emitCharacter():void {
+      // console.log(this.character)
+      //Si no se escribe nada no se hace nada
+      if ( this.character.name.length === 0 ) return;
+
+      //Pero si se ha escrito algo emitimos los datos
+      this.onNewCharacter.emit(this.character)
+
+      //Resetemos valores
+      this.character = {name:'', power:0}
+    }
 }

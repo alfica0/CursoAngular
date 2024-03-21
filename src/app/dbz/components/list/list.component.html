@@ -5,10 +5,21 @@
     let i = index;
     let isFirst = first;
     let isLast = last;
+    let isEven = even;
+    let isOdd = odd;
     "
-    class="list-group-item {{ i===0 ? 'list-group-item-success':''}}">
-    <span class="text-primary">{{ i+1 }}</span>
-     <strong>{{character.name}} </strong>
-     <span> - power: {{ character.power}}</span>
-    </li>
+    class="list-group-item d-flex justify-content-between aling-items-center"
+    [ngClass]="{
+      'list-group-item-dark': isLast,
+      'list-group-item-primary': isEven
+    }"    >
+    <div>
+      <span class="text-primary">{{ i+1 }}. </span>
+      <span>{{character.name}} - </span>
+      <strong> Power: </strong>
+      <span> {{ character.power}} </span>
+    </div>
+
+    <button class="btn btn-danger" (click)="deleteItem(i)">X</button>
+  </li>
 </ul>
