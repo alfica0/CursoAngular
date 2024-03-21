@@ -21,7 +21,7 @@ export class DbzService {
     power: 2000
   }]
 
-  onNewCharacter( character:Character ):void {
+  addCharacter( character:Character ):void {
     // this.characters.unshift(character)  //Lo añade al inicio
     const newCharacter: Character = {id: uuid(), ...character}
     this.characters.push(newCharacter)     //Lo añade al final
