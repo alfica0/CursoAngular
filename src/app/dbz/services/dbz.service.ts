@@ -27,11 +27,11 @@ export class DbzService {
     this.characters.push(newCharacter)     //Lo añade al final
   }
 
-  onDeleteCharacter( index:number ):void {
-    this.characters.splice(index,1)
-  }
+  // onDeleteCharacter( index:number ):void {
+  //   this.characters.splice(index,1)
+  // }
 
-  deleteCharacterById( id:string ) {
+  deleteCharacterById( id:string ):void {
     this.characters = this.characters.filter ( character => character.id !== id );
   }
 

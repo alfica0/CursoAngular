@@ -11,14 +11,16 @@ export class ListComponent {
 
   @Input()
   public ListCharaters: Character[] = [{
+    id: '',
     name: 'Trunk',
     power: 10
   }]
 
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
-  deleteItem(id:number){
+  deleteItem(id?:string):void{
+    if ( !id ) return;
     this.onDelete.emit( id );
   }
 }
